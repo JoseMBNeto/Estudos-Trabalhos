@@ -53,7 +53,7 @@ int main(void) {
     int tamanho; 
     char *inicio = maiorSubstringVogais(str, &tamanho);
 
-    printf("\nA maior substring de vogais tem [%d] vogais\n",tamanho);
+    printf("%d",tamanho);
 
     copiar(saida,inicio, tamanho);
     printf("\n%s\n",saida);
