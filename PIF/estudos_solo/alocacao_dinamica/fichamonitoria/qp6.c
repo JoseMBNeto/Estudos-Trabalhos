@@ -29,8 +29,10 @@ int main() {
     n++;
 
     for (int i=0;i<n;i++){
-        printf("%d", vet[i]);
+        printf("%d ", vet[i]);
     }
+
+    free(vet);
 
 
     return 0;
