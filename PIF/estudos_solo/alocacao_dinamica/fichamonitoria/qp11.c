@@ -27,6 +27,10 @@ int main() {
         vet2[k++] = vet[i]; 
     }
 
+    // for (int i=0; i<n; I+){
+    //      vet2[i] = vet[(n-1) - i];
+    //}
+
     for (int i=0;i<n;i++){
         printf("%d ", vet2[i]);
     }
