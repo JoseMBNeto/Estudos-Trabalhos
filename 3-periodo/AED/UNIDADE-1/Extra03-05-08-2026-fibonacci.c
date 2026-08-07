@@ -51,32 +51,6 @@ void imprime(Node* head){
     printf("\n");
 }
 
-void remover (Node**head, int valor){
-    Node* anterior = NULL;
-    Node* atual = *head;
-    if (*head == NULL){
-        printf("Lista vazia!\n");
-    }
-
-    if(atual->valor == valor){
-        *head = atual->next;
-        free(atual);
-        return;
-    }
-
-    while(atual != NULL && atual->valor != valor){
-        anterior = atual;
-        atual = atual->next;
-    }
-
-    if (atual == NULL){
-        printf("O valor nao existe!");
-    }
-
-    anterior->next = atual->next;
-    free(atual);
-}
-
 void remover_por_indice(Node **head, int i) {
     if (*head == NULL) {
         printf("Lista vazia!\n");
