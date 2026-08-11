@@ -3,8 +3,8 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define LIMITE_TOTAL 10
-#define LIMITE_MEIA 5
+#define LIMITE_TOTAL 200000
+#define LIMITE_MEIA 50000
 
 typedef struct Usuario {
     int id;
@@ -53,7 +53,7 @@ void enfileirar (Fila *f, int id, const char *nome, bool ehfan){
     printf("\n");
     printf("Bem vindo, %s!\n", novo->nome);
     printf("Id do usuario: %d (%s)\n", novo->id, novo->ehfan ? "Membro do clube" : "Publico geral");
-    printf(" -> Ha exatamente %d pessoas a sua frente na fila.\n", pessoasAfrente);
+    printf("\n -> Ha exatamente %d pessoas a sua frente na fila.\n", pessoasAfrente);
 }
 
 void atenderProximo (Fila *f, Bilheteria *b, int tipoIngresso){
@@ -87,9 +87,9 @@ void atenderProximo (Fila *f, Bilheteria *b, int tipoIngresso){
     }
 
     printf("\n[-] ATENDIMENTO CONCLUIDO:\n");
-    printf("    Usuario: %s (id: %d)\n", atendido->nome, atendido->id);
-    printf("    Tipo de ingresso: %s\n", (tipoIngresso == 2) ? "Meia entrada" : "Inteira");
-    printf("    Ingressos vendidos: %d/%d (Meias: %d/%d)\n", b->totalVendidos, LIMITE_TOTAL, b->meiasVendidas, LIMITE_MEIA);
+    printf("    \nUsuario: %s (id: %d)\n", atendido->nome, atendido->id);
+    printf("    \nTipo de ingresso: %s\n", (tipoIngresso == 2) ? "Meia entrada" : "Inteira");
+    printf("    \nIngressos vendidos: %d/%d (Meias: %d/%d)\n", b->totalVendidos, LIMITE_TOTAL, b->meiasVendidas, LIMITE_MEIA);
 
     free(atendido);
 }
@@ -164,8 +164,8 @@ int main() {
             }
 
             case 4: {
-                printf("Total Vendas: %d / %d\n", bilheteria.totalVendidos, LIMITE_TOTAL);
-                printf("Mais vendidas: %d / %d\n", bilheteria.meiasVendidas, LIMITE_MEIA);\
+                printf("\nTotal Vendas: %d / %d\n", bilheteria.totalVendidos, LIMITE_TOTAL);
+                printf("\nMais vendidas: %d / %d\n", bilheteria.meiasVendidas, LIMITE_MEIA);\
                 break;
             }
 
